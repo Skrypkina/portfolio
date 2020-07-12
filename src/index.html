@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webstudio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/css/main.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-wrapper">
+          <a href="./index.html" class="site-logo"
+            >Web <span class="logo-span">Studio</span></a
+          >
+          <button
+            type="button"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            class="mobile-button"
+            data-menu-button
+          >
+            <!-- <svg
+            class="mobile-menu"
+            aria-label="switches mobile menu"
+            width="40"
+            height="40"
+          >
+            <use
+              class="icon-menu"
+              href="./images/symbol-defs.svg#icon-menu_40px"
+            ></use>
+            <use
+              class="icon-cross"
+              href="./images/symbol-defs.svg#icon-close_40px"
+            ></use>
+          </svg> -->
+            <svg
+              width="40"
+              height="40"
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon-menu"
+              aria-label="switches mobile menu"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8 14.667V12h24v2.667H8zm0 6.666h24v-2.666H8v2.666zM8 28h24v-2.667H8V28z"
+              />
+            </svg>
+            <svg
+              class="icon-cross"
+              width="40"
+              height="40"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="switches mobile menu"
+            >
+              <path
+                d="M29.667 12.88L27.787 11l-7.454 7.453L12.88 11 11 12.88l7.453 7.453L11 27.787l1.88 1.88 7.453-7.454 7.454 7.454 1.88-1.88-7.454-7.454 7.454-7.453z"
+              />
+            </svg>
+          </button>
+          <!-- div mobile-menu only for side-mobileMenu -->
+          <!-- <div class="mobile-menu" data-mobile> -->
+          <div class="menu-container" id="menu-container" data-menu>
+            <nav class="nav">
+              <ul class="navigation">
+                <li class="navigation-item">
+                  <a href="" class="navigation-link current-page">
+                    Studio
+                  </a>
+                </li>
+                <li class="navigation-item">
+                  <a href="" target="_blank" class="navigation-link">
+                    Portfolio
+                  </a>
+                </li>
+
+                <li class="navigation-item">
+                  <a href="" class="navigation-link">
+                    Contacts
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <ul class="contacts">
+              <li class="contacts-item">
+                <a href="" class="contacts-link">
+                  <svg
+                    width="16"
+                    height="12"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="contacts-svg"
+                  >
+                    <path
+                      d="M14.5 0h-13C.673 0 0 .628 0 1.4v8.402c0 .772.673 1.4 1.5 1.4h13c.827 0 1.5-.628 1.5-1.4V1.4c0-.772-.673-1.4-1.5-1.4zm0 .933a.53.53 0 01.192.037L8 6.384 1.308.97A.529.529 0 011.5.933h13zm0 9.335h-13c-.276 0-.5-.209-.5-.466V1.956l6.672 5.398A.52.52 0 008 7.468a.52.52 0 00.328-.114L15 1.956v7.846c0 .257-.224.466-.5.466z"
+                    />
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+
+              <li class="contacts-item">
+                <a href="" class="contacts-link">
+                  <svg
+                    width="10"
+                    height="15"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="contacts-svg"
+                  >
+                    <path
+                      d="M8.5 0h-7C.673 0 0 .628 0 1.4v12.136c0 .772.673 1.4 1.5 1.4h7c.827 0 1.5-.628 1.5-1.4V1.4C10 .628 9.327 0 8.5 0zm-7 .933h7c.276 0 .5.21.5.467v9.802H1V1.4c0-.257.224-.467.5-.467zm7 13.07h-7c-.276 0-.5-.21-.5-.467v-1.4h8v1.4c0 .257-.224.466-.5.466z"
+                    />
+                    <path
+                      d="M2.354 12.739a.445.445 0 010 .66.525.525 0 01-.708 0 .445.445 0 010-.66.525.525 0 01.708 0z"
+                    />
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- main -->
+    <main>
+      <section class="portfolio">
+        <div class="container">
+          <h1 class="portfolio-title">Our portfolio</h1>
+          <div role="group" class="group">
+            <label class="options-label">
+              <input
+                type="radio"
+                name="options-buttons"
+                value="all"
+                class="options-input"
+              />
+              <span class="options-span">All</span>
+            </label>
+
+            <label class="options-label">
+              <input
+                type="radio"
+                name="options-buttons"
+                value="sites"
+                class="options-input"
+              />
+              <span class="options-span">Sites</span>
+            </label>
+
+            <label class="options-label">
+              <input
+                type="radio"
+                name="options-buttons"
+                value="apps"
+                class="options-input"
+              />
+              <span class="options-span">Applications</span>
+            </label>
+
+            <label class="options-label">
+              <input
+                type="radio"
+                name="options-buttons"
+                value="design"
+                class="options-input"
+              />
+              <span class="options-span">Design</span>
+            </label>
+
+            <label class="options-label">
+              <input
+                type="radio"
+                name="options-buttons"
+                value="marketing"
+                class="options-input"
+              />
+              <span class="options-span">Marketing</span>
+            </label>
+          </div>
+
+          <ul class="img-list">
+            <li class="img-item">
+              <img
+                src="./images/texno (1).jpg"
+                alt="website image"
+                height="294"
+                class="image"
+              />
+              <h2 class="img-title">Texnokrake</h2>
+              <p class="img-descr">Website</p>
+            </li>
+            <li class="img-item">
+              <img
+                src="./images/footboll (1).jpg"
+                alt="volleyball players poster"
+                height="294"
+                class="image"
+              />
+              <h2 class="img-title">New Orlean vs Golden Star</h2>
+              <p class="img-descr">Design</p>
+            </li>
+            <li class="img-item">
+              <img
+                src="./images/seafood (1).jpg"
+                alt="seafood poster"
+                class="image"
+              />
+              <h2 class="img-title">Restaurant Seafood</h2>
+              <p class="img-descr">Application</p>
+            </li>
+            <li class="img-item">
+              <img
+                src="./images/prime (1).jpg"
+                alt=" headphones image"
+                class="image"
+              />
+              <h2 class="img-title">Project Prime</h2>
+              <p class="img-descr">Marketing</p>
+            </li>
+            <li class="img-item">
+              <img
+                src="./images/boxes (1).jpg"
+                alt="boxes image"
+                class="image"
+              />
+              <h2 class="img-title">Project Boxes</h2>
+              <p class="img-descr">Application</p>
+            </li>
+            <li class="img-item">
+              <img
+                src="./images/inspiration (1).jpg"
+                alt="computer image"
+                class="image"
+              />
+              <h2 class="img-title">Inspiration has no Borders</h2>
+              <p class="img-descr">Website</p>
+            </li>
+            <li class="img-item">
+              <img
+                src="./images/edition (1).jpg"
+                alt="book image"
+                class="image"
+              />
+              <h2 class="img-title">Limited Edition</h2>
+              <p class="img-descr">Design</p>
+            </li>
+            <li class="img-item">
+              <img src="./images/lab (1).jpg" alt="tag image" class="image" />
+              <h2 class="img-title">Project LAB</h2>
+              <p class="img-descr">Application</p>
+            </li>
+            <li class="img-item">
+              <img
+                src="./images/bussness (1).jpg"
+                alt="computer image"
+                class="image"
+              />
+              <h2 class="img-title">Growing Business</h2>
+              <p class="img-descr">Application</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Секція слайдера -->
+      <div class="section-hero">
+        <!-- Слайдер -->
+        <div class="slider">
+          <div class="slider-item">
+            <img src="./images/lab (1).jpg" alt="Первый слайд" />
+          </div>
+          <div class="slider-item">
+            <img src="./images/footboll (1).jpg" alt="Второй слайд" />
+          </div>
+          <div class="slider-item">
+            <img src="./images/inspiration (1).jpg" alt="Третий слайд" />
+          </div>
+        </div>
+
+        <!-- Вказівник слайду -->
+        <div class="slider-dots">
+          <span class="slider-dots_item" onclick="currentSlide(1)"></span>
+          <span class="slider-dots_item" onclick="currentSlide(2)"></span>
+          <span class="slider-dots_item" onclick="currentSlide(3)"></span>
+        </div>
+
+        <!-- перимикач слайдера -->
+        <div class="button-slayder">
+          <button class="button-end prev" onclick="minusSlide()">Назад</button>
+          <button class="button-up next" onclick="plusSlide()">Вперед</button>
+        </div>
+
+        <!-- Текст над слайдом -->
+        <div class="hero">
+          <h2 class="subtitle-hero">A hair salon for men in Kyiv</h2>
+          <h1 class="title-hero">BarberShop</h1>
+          <p class="text-hero">
+            Мы эксперты в модных мужских стрижках. <br />
+            Работаем быстро, осторожно и совкусом.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="info">
+          <a href="./index.html" class="site-logo footer-logo"
+            >Web <span class="logo-footer">Studio</span></a
+          >
+          <address>
+            <span class="address">Lesy Ukrainki avenue, Kiev</span>
+            <ul>
+              <li class="contacts-info">info@example.com</li>
+              <li class="contacts-info">+38 099 111 11 11</li>
+            </ul>
+          </address>
+        </div>
+        <div class="socials">
+          <p class="footer-title">Join us</p>
+          <ul class="social-list">
+            <li class="social-icon">
+              <a href="" class="social-link footer-link">
+                <svg
+                  class="social-svg footer-svg"
+                  width="20"
+                  height="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0)">
+                    <path
+                      d="M19.98 5.88c-.046-1.063-.218-1.793-.464-2.426a4.88 4.88 0 00-1.157-1.774 4.922 4.922 0 00-1.77-1.153C15.952.281 15.226.11 14.163.063 13.093.012 12.753 0 10.037 0 7.322 0 6.982.012 5.915.059 4.853.105 4.122.277 3.49.523A4.88 4.88 0 001.715 1.68 4.924 4.924 0 00.563 3.45C.316 4.087.145 4.813.098 5.876c-.051 1.07-.063 1.41-.063 4.126 0 2.715.012 3.055.059 4.122.047 1.063.219 1.793.465 2.426a4.932 4.932 0 001.156 1.774c.5.508 1.106.902 1.77 1.152.637.247 1.364.419 2.426.465 1.067.047 1.407.059 4.122.059 2.716 0 3.056-.012 4.122-.059 1.063-.046 1.793-.218 2.426-.464a5.116 5.116 0 002.927-2.927c.246-.637.418-1.364.465-2.426.047-1.067.058-1.407.058-4.122s-.004-3.055-.05-4.122zm-1.8 8.166c-.044.977-.208 1.504-.344 1.856a3.318 3.318 0 01-1.9 1.898c-.35.137-.882.301-1.855.344-1.055.047-1.371.059-4.04.059-2.668 0-2.989-.012-4.04-.059-.977-.043-1.504-.207-1.856-.344a3.077 3.077 0 01-1.148-.746 3.11 3.11 0 01-.747-1.148c-.136-.352-.3-.883-.343-1.856-.047-1.055-.059-1.372-.059-4.04 0-2.669.012-2.99.059-4.04.043-.977.207-1.504.343-1.856A3.04 3.04 0 013 2.965a3.105 3.105 0 011.15-.746c.35-.137.882-.3 1.855-.344 1.055-.046 1.372-.058 4.04-.058 2.672 0 2.989.012 4.04.058.977.043 1.504.207 1.856.344.433.16.828.414 1.148.746.332.325.586.715.747 1.15.136.35.3.882.343 1.855.047 1.055.059 1.371.059 4.04 0 2.668-.012 2.98-.059 4.036z"
+                    />
+                    <path
+                      d="M10.037 4.864A5.139 5.139 0 004.9 10.002a5.139 5.139 0 0010.276 0 5.139 5.139 0 00-5.138-5.138zm0 8.47a3.333 3.333 0 11.001-6.666 3.333 3.333 0 010 6.667zM16.578 4.661a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0">
+                      <path d="M0 0h20v20H0z" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </li>
+            <li class="social-icon">
+              <a href="" class="social-link footer-link">
+                <svg
+                  class="social-svg footer-svg"
+                  width="20"
+                  height="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0)">
+                    <path
+                      d="M20 3.799a8.549 8.549 0 01-2.363.647 4.077 4.077 0 001.804-2.266 8.192 8.192 0 01-2.6.992A4.099 4.099 0 009.75 5.976c0 .325.027.638.095.935-3.409-.166-6.425-1.8-8.451-4.288A4.128 4.128 0 00.83 4.694c0 1.42.732 2.679 1.821 3.407A4.05 4.05 0 01.8 7.597v.045a4.119 4.119 0 003.285 4.03 4.09 4.09 0 01-1.075.134c-.262 0-.527-.015-.776-.07.531 1.624 2.038 2.818 3.831 2.856a8.238 8.238 0 01-5.084 1.75A7.67 7.67 0 010 16.284a11.543 11.543 0 006.29 1.84c7.545 0 11.67-6.25 11.67-11.668 0-.18-.006-.356-.015-.53A8.179 8.179 0 0020 3.8z"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0">
+                      <path d="M0 0h20v20H0z" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </li>
+            <li class="social-icon">
+              <a href="" class="social-link footer-link">
+                <svg
+                  class="social-svg footer-svg"
+                  width="20"
+                  height="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0)">
+                    <path
+                      d="M13.33 3.32h1.827V.14a23.576 23.576 0 00-2.66-.14C9.864 0 8.06 1.656 8.06 4.7v2.8H5.156v3.555H8.06V20h3.562v-8.944h2.787l.443-3.555h-3.231V5.05c0-1.027.277-1.73 1.709-1.73z"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0">
+                      <path d="M0 0h20v20H0z" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </li>
+            <li class="social-icon">
+              <a href="" class="social-link footer-link">
+                <svg
+                  class="social-svg footer-svg"
+                  width="20"
+                  height="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0)">
+                    <path
+                      d="M19.995 20H20v-7.336c0-3.588-.772-6.352-4.967-6.352-2.017 0-3.37 1.106-3.923 2.156h-.058V6.647H7.074v13.352h4.142v-6.611c0-1.741.33-3.425 2.486-3.425 2.124 0 2.156 1.987 2.156 3.536V20h4.137zM.33 6.647h4.147V20H.33V6.647zM2.402 0A2.402 2.402 0 000 2.402c0 1.325 1.076 2.424 2.402 2.424 1.325 0 2.401-1.098 2.401-2.424A2.403 2.403 0 002.402 0z"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0">
+                      <path d="M0 0h20v20H0z" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-form">
+          <p class="footer-title">Subscribe</p>
+          <form action="" class="form">
+            <label>
+              <input
+                type="text"
+                name="email"
+                class="footer-input"
+                placeholder=" Email"
+              />
+            </label>
+            <button type="submit" class="footer-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <!-- JS Слайдера -->
+    <script>
+      /* Индекс слайда по умолчанию */
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      /* Функция увеличивает индекс на 1, показывает следующй слайд*/
+      function plusSlide() {
+        showSlides((slideIndex += 1));
+      }
+
+      /* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
+      function minusSlide() {
+        showSlides((slideIndex -= 1));
+      }
+
+      /* Устанавливает текущий слайд */
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      /* Основная функция слайдера */
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("slider-item");
+        var dots = document.getElementsByClassName("slider-dots_item");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+  </body>
+</html>

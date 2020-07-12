@@ -1,0 +1,29 @@
+// device width
+
+$mobile: 480px;
+$tablet: 768px;
+$desctop: 1200px;
+
+// colors
+$primary-color: #212121;
+$secondary-color: #2196f3;
+$secondary-text-color: #757575;
+$modile-menu-color: #fff;
+$footer-color: #2f303a;
+$team-section-color: #f5f4fa;
+$hero-section-main-color: #fff;
+$footer-address-color: rgba(255, 255, 255, 0.6);
+$footer-socials: rgba(255, 255, 255, 0.1);
+$capability-items: rgba(47, 48, 58, 0.8);
+$modal-backdrop: rgba(0, 0, 0, 0.2);
+
+// borders
+$header-border: 1px solid #ececec;
+$header-menu-border: 0px 1px 2px -2px rgba(0, 0, 0, 0.16),
+  0px 2px 4px rgba(0, 0, 0, 0.08), 0px 4px 8px rgba(0, 0, 0, 0.04);
+$team-item-boxshadow: 0px 2px 1px rgba(0, 0, 0, 0.2),
+  0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+
+//   header
+$header-mob-heught: 60px;
+$desktop-height: 80px;

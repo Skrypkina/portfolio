@@ -1,0 +1,166 @@
+.footer {
+  padding: 60px 0px;
+  background-color: $footer-color;
+}
+
+.info {
+  text-align: center;
+  @media (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+  @media (min-width: $tablet) and (max-width: 1199px) {
+    margin-right: 165px;
+  }
+  @media (min-width: $desctop) {
+    margin-right: 69px;
+  }
+}
+
+address {
+  text-align: center;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  @media (min-width: $desctop) {
+    text-align: left;
+    margin-top: 20px;
+  }
+}
+
+.logo-footer {
+  color: $hero-section-main-color;
+}
+.footer-logo {
+  display: block;
+  @media (max-width: 1199px) {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+}
+.address {
+  display: block;
+  color: $hero-section-main-color;
+  margin-bottom: 8px;
+}
+.contacts-info {
+  color: $footer-address-color;
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+.socials {
+  text-align: center;
+  @media (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+  @media (min-width: $desctop) {
+    margin-right: 94px;
+  }
+}
+.footer-title {
+  font-weight: bold;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  text-transform: uppercase;
+  color: $hero-section-main-color;
+  margin-bottom: 20px;
+  @media (min-width: $desctop) {
+    text-align: left;
+  }
+}
+
+.footer-link {
+  background-color: $footer-socials;
+}
+.footer-svg {
+  fill: $hero-section-main-color;
+}
+
+.footer-form {
+  text-align: center;
+  @media (min-width: $tablet) and (max-width: 1199px) {
+    width: 50%;
+  }
+}
+
+.footer-input {
+  display: block;
+  max-width: 450px;
+  width: 100%;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  background-color: #2f303a;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  @media (min-width: $desctop) {
+    width: 358px;
+    margin-right: 12px;
+  }
+}
+
+.footer-container {
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.footer-btn {
+  @extend %button;
+  padding: 10px 29px;
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/icon\ send\ \(1\).svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 10px;
+  }
+  @media (max-width: 1199px) {
+    margin-top: 20px;
+  }
+}
+.form {
+  @media (min-width: $desctop) {
+    display: flex;
+  }
+}
+
+// socoals
+
+.social-list {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-svg {
+  fill: $secondary-text-color;
+  @include hover(fill);
+  .social-link:hover &,
+  .social-link:focus & {
+    fill: $team-section-color;
+  }
+}
+
+.social-link {
+  display: block;
+  padding: 12px;
+  border-radius: 50%;
+  @include hover(background-color);
+  &:hover,
+  &:focus {
+    background-color: $secondary-color;
+  }
+}

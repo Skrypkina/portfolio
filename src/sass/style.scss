@@ -1,0 +1,17 @@
+@import "helpers/variables.scss";
+@import "helpers/placeholders.scss";
+@import "helpers/mixins.scss";
+@import "normalize.scss";
+
+// components
+// header
+@import "components/base.scss";
+@import "components/container.scss";
+@import "components/header-wrapper.scss";
+@import "components/header.scss";
+// @import "components/side-mobileMenu.scss";
+
+// main
+@import "components/main.scss";
+// footer
+@import "components/footer.scss";

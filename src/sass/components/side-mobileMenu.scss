@@ -1,0 +1,87 @@
+.header {
+  min-height: $header-min-heught;
+  position: relative;
+  border-bottom: $header-border;
+}
+
+// logo
+.site-logo {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  font-family: "Raleway", sans-serif;
+  color: $secondary-color;
+}
+
+.logo-span {
+  color: $primary-color;
+}
+
+// menu mobile button
+
+.mobile-button {
+  display: inline-flex;
+  & .icon-menu,
+  & .icon-cross {
+    background-color: #ffffff;
+  }
+  &:focus .icon-menu,
+  &:focus .icon-cross,
+  &:hover .icon-menu,
+  &:hover .icon-cross {
+    fill: $secondary-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile-button .icon-cross {
+  display: none;
+}
+
+.mobile-button.is-open .icon-cross {
+  display: block;
+}
+
+.mobile-button.is-open .icon-menu {
+  display: none;
+}
+
+// menu-container
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms linear, visibility 250ms linear;
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: none;
+}
+
+.mobile-menu .menu-container {
+  height: 100%;
+  background-color: #fff;
+  width: 70%;
+
+  transform: translateX(-100%);
+
+  transition: transform 250ms linear;
+}
+
+.mobile-menu.is-open .menu-container {
+  transform: translateX(0);
+}
