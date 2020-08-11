@@ -1,7 +1,11 @@
 @import "helpers/variables.scss";
+@import "helpers/placeholders.scss";
+@import "helpers/mixins.scss";
 
 //components
 @import "components/base.scss";
 @import "components/header.scss";
 @import "components/container.scss";
 @import "components/hero.scss";
+@import "components/about.scss";
+@import "components/prices.scss";

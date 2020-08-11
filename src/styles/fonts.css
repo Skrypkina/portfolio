@@ -3,7 +3,11 @@
   src: url("../assets/fonts/RobotoMono-Regular.ttf") format("truetype");
 } */
 
+/* @font-face {
+  font-family: "Raleway";
+  src: url("../assets/fonts/Raleway-ExtraBold.ttf") format("truetype");
+} */
 @font-face {
   font-family: "Raleway";
-  src: url("../assets/fonts/RobotoMono-Regular.ttf") format("truetype");
+  src: url("../assets/fonts/Raleway-Bold.ttf") format("truetype");
 }

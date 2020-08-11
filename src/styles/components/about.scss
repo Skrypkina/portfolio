@@ -1,0 +1,124 @@
+.info-paragraph {
+  @include paragraph($primary-font-color);
+  margin-bottom: 27px;
+}
+
+.info {
+  @media (min-width: $tablet) {
+    padding-right: 28px;
+  }
+  @media (min-width: $desctop) {
+    // padding-right: 56px;
+  }
+}
+.info-title {
+  font-family: Raleway;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+  @media (min-width: $desctop) {
+    font-size: 42px;
+    line-height: 1.16;
+  }
+}
+.info-descr {
+  font-size: 14px;
+  line-height: 1.9;
+  letter-spacing: 0.02em;
+  margin-bottom: 70px;
+  color: $paragraph-font-color;
+  &.accent {
+    font-size: 16px;
+    margin-bottom: 20px;
+    @media (min-width: $desctop) {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+  }
+  @media (min-width: $desctop) {
+    margin-bottom: 40px;
+  }
+}
+.info-link {
+  @include button($primary-font-color);
+}
+
+// images
+
+.images {
+  display: none;
+  @media (min-width: $tablet) {
+    display: block;
+  }
+  @media (min-width: $tablet) and (max-width: $maxDesctop) {
+    margin-right: 30px;
+  }
+  @media (min-width: $desctop) {
+    margin-right: 64px;
+  }
+}
+
+.images-list {
+  @media (min-width: $desctop) {
+    display: flex;
+  }
+}
+
+.images-item {
+  background-position: center;
+  background-size: cover;
+  //tablet
+  @media (min-width: $tablet) and (max-width: $maxDesctop) {
+    width: 330px;
+    height: 235px;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    &.first {
+      background-image: url("../assets/about1.jpg");
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url("../assets/about1@2x.jpg");
+      }
+    }
+    &.second {
+      background-image: url("../assets/about2.jpg");
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url("../assets/about2@2x.jpg");
+      }
+    }
+  }
+
+  //desctop
+
+  @media (min-width: $desctop) {
+    width: 270px;
+    height: 445px;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+    &.first {
+      background-image: url("../assets/about1big.jpg");
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url("../assets/about1big@2x.jpg");
+      }
+    }
+    &.second {
+      background-image: url("../assets/about2big.jpg");
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url("../assets/about2big@2x.jpg");
+      }
+    }
+  }
+}

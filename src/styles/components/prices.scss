@@ -1,0 +1,111 @@
+.prices {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../assets/prices.png");
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url("../assets/prices@2x.png");
+  }
+  background-color: #111319;
+  @media (min-width: $tablet) {
+    background-image: url("../assets/priceTablet.png");
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url("../assets/priceTablet@2x.png");
+    }
+  }
+}
+.center {
+  text-align: center;
+  @media (min-width: $desctop) {
+    padding-left: 55px;
+  }
+}
+
+.prices-paragraph {
+  @include paragraph($subtitle-font-color);
+  font-size: 10px;
+  margin-bottom: 20px;
+  text-align: left;
+  @media (min-width: $tablet) {
+    font-size: 11px;
+  }
+}
+
+.prices-title {
+  @include headline($secondary-font-color);
+  margin-bottom: 44px;
+  text-align: left;
+}
+.prices-overlay {
+  padding: 30px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  @media (max-width: $maxTablet) {
+    max-width: 418px;
+  }
+  @media (max-width: $maxDesctop) {
+    background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  }
+  @media (min-width: $tablet) {
+    width: 690px;
+    padding: 30px 40px;
+  }
+  @media (min-width: $desctop) {
+    display: flex;
+    justify-content: center;
+    width: 1170px;
+    padding: 0;
+  }
+}
+.prices-pricelist {
+  &.first {
+    margin-bottom: 20px;
+  }
+  @media (min-width: $desctop) {
+    width: calc(100% / 2);
+    padding: 30px 40px;
+    background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+    &.first {
+      background: linear-gradient(
+        180deg,
+        #171a24 0%,
+        rgba(23, 26, 36, 0.2) 100%
+      );
+      margin-bottom: 0;
+    }
+  }
+}
+.prices-descr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 2.14;
+  letter-spacing: 0.02em;
+  color: $darktheme-font-color;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  @media (min-width: $tablet) {
+    font-size: 18px;
+  }
+}
+.prices-service {
+  margin-right: 10px;
+}
+.prices-space {
+  flex-grow: 1;
+  height: 1px;
+  background-color: $prices-line-color;
+  margin-top: 10px;
+}
+.prices-span {
+  margin-left: 10px;
+}
+.prices-link {
+  @include button($secondary-font-color);
+}

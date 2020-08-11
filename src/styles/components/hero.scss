@@ -13,7 +13,6 @@
 .slider-item {
   background-position: center;
   background-size: cover;
-  background-position: center;
   transition: 250ms linear;
   @media (max-width: $maxTablet) {
     max-width: 480px;
@@ -170,7 +169,6 @@
 
 //heading div
 .overlay {
-  // position: relative;
   margin-left: auto;
   margin-right: auto;
   @media (max-width: $maxTablet) {
@@ -178,10 +176,15 @@
   }
   @media (min-width: $tablet) {
     width: 768px;
+    margin-right: unset;
+    &.flex {
+      display: flex;
+    }
   }
   @media (min-width: $tablet) {
     max-width: 1280px;
     width: 100%;
+    margin-right: auto;
   }
 }
 
@@ -198,22 +201,7 @@
   }
 }
 .heading-paragraph {
-  font-family: Open Sans;
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 15px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: $subtitle-font-color;
-  margin-bottom: 20px;
-  &::before {
-    content: "";
-    display: inline-block;
-    width: 60px;
-    height: 1px;
-    background-color: $subtitle-font-color;
-    margin-right: 20px;
-  }
+  @include paragraph($subtitle-font-color);
 }
 .heading-title {
   margin: 0;
@@ -223,6 +211,10 @@
   line-height: 1.16;
   color: $secondary-font-color;
   margin-bottom: 20px;
+  @media (min-width: $desctop) {
+    font-size: 72px;
+    line-height: 1.18;
+  }
 }
 .heading-descr {
   @media (max-width: $maxTablet) {
@@ -236,21 +228,27 @@
   @media (min-width: $tablet) {
     width: 360px;
   }
+  @media (min-width: $desctop) {
+    font-size: 18px;
+  }
 }
 // sosials // styles for sosials-link and socials-icon are in the header
 .socials {
   display: none;
   @media (min-width: $tablet) {
     position: absolute;
-    // top: 520px;
-    // left: -40px;
     top: 70%;
-    left: -28%;
+    left: -34%;
     display: inline-flex;
     -ms-transform: rotate(-90deg); /* IE 9 */
     transform: rotate(-90deg);
   }
   @media (min-width: $desctop) {
-    left: -18%;
+    height: 155px;
+    left: -10%;
   }
+}
+
+.side {
+  width: 159px;
 }

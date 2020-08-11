@@ -9,7 +9,6 @@
 
   @media (min-width: $tablet) {
     max-width: 768px;
-    transform: translateX(-56%);
   }
   @media (min-width: $desctop) {
     max-width: 1280px;
@@ -25,6 +24,9 @@
   margin-left: 31px;
   @media (min-width: $tablet) {
     padding-left: 20px;
+  }
+  @media (min-width: $desctop) {
+    padding-left: 40px;
   }
 }
 
@@ -171,7 +173,6 @@
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.09em;
-  text-transform: uppercase;
   @media (min-width: $tablet) and (max-width: $maxDesctop) {
     &:last-child {
       margin-bottom: 20px;
@@ -183,6 +184,7 @@
   border: 1px solid $accent-font-color;
   border-radius: 25px;
   padding: 12px 37px;
+  text-transform: uppercase;
   transition: color 250ms linear;
   &:hover,
   &:focus {

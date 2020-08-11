@@ -1,0 +1,44 @@
+@mixin paragraph($color) {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $color;
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 60px;
+    height: 1px;
+    background-color: $color;
+    margin-right: 20px;
+    margin-bottom: 3px;
+  }
+}
+
+@mixin button($color) {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.09em;
+  color: $color;
+  border: 1px solid $accent-font-color;
+  border-radius: 25px;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  transition: color 250ms linear;
+  &:hover,
+  &:focus {
+    background-color: $accent-font-color;
+    color: $secondary-font-color;
+  }
+}
+@mixin headline($color) {
+  font-family: Raleway;
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 49px;
+  letter-spacing: 0.05em;
+  color: $color;
+}
