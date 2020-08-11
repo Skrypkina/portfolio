@@ -1,0 +1,9 @@
+/* @font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/RobotoMono-Regular.ttf") format("truetype");
+} */
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../assets/fonts/RobotoMono-Regular.ttf") format("truetype");
+}
