@@ -50,6 +50,11 @@
 .logo-svg {
   @media (max-width: $maxTablet) {
     fill: $secondary-font-color;
+    fill: "currentColor";
+  }
+  @media (min-width: $tablet) {
+    fill: $primary-font-color;
+    fill: "currentColor";
   }
 }
 // header navigation

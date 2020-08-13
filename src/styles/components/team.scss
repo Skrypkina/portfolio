@@ -1,0 +1,120 @@
+.team {
+  background-color: $secondary-backgroud-color;
+}
+
+.team-paragraph {
+  @include paragraph($primary-font-color);
+  margin-bottom: 20px;
+}
+.team-title {
+  @include headline($primary-font-color);
+  margin-bottom: 44px;
+}
+.member-image {
+  @media (max-width: $maxTablet) {
+    max-width: 418px;
+  }
+  height: 360px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 30px;
+
+  &.john {
+    background-image: url("../assets/team1.jpg");
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url("../assets/team1@2x.jpg");
+    }
+  }
+  &.michele {
+    background-image: url("../assets/team2.jpg");
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url("../assets/team2@2x.jpg");
+    }
+  }
+  &.alan {
+    background-image: url("../assets/team3.jpg");
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url("../assets/team3@2x.jpg");
+    }
+  }
+  @media (min-width: $tablet) {
+    width: 100%;
+  }
+}
+.team-member {
+  text-align: center;
+  padding-bottom: 34px;
+  @media (max-width: $maxDesctop) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media (min-width: $desctop) {
+    width: calc((100% - 2 * 30px) / 3);
+  }
+}
+
+.memeber-title {
+  font-size: 18px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+.member-descr {
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  color: $accent-font-color;
+  margin-bottom: 30px;
+}
+.icons {
+  text-align: center;
+}
+
+.icons-link {
+  padding: 10px;
+  background-color: white;
+  border-radius: 50%;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+.instagram,
+.twitter,
+.facebook,
+.linkedin {
+  vertical-align: middle;
+  fill: $primary-font-color;
+  transition: fill 250ms linear;
+  &:hover,
+  &:focus {
+    fill: $accent-font-color;
+  }
+}
+
+.team-list {
+  margin: 0;
+  @media (min-width: $tablet) {
+    width: 450px;
+    margin: 0 auto;
+  }
+  @media (min-width: $desctop) {
+    display: flex;
+    width: 1200px;
+    justify-content: space-between;
+  }
+}
+
+.team-wrapper {
+  @media (min-width: $tablet) and (max-width: $maxDesctop) {
+    width: 450px;
+    margin: 0 auto;
+  }
+}
