@@ -1,0 +1,83 @@
+.portfolio-paragraph {
+  @include paragraph($primary-font-color);
+  margin-bottom: 44px;
+  @media (min-width: $tablet) {
+    margin-left: 15px;
+  }
+}
+.portfolio-span {
+  @media (max-width: $maxTablet) {
+    display: block;
+    margin-left: 80px;
+    line-height: 21px;
+  }
+}
+
+.portfolio-title {
+  @extend %visually-hidden;
+}
+
+.portfolio-item {
+  height: 360px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media (max-width: $maxTablet) {
+    max-width: 418px;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media (min-width: $tablet) {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+  @media (min-width: $desctop) {
+    width: 270px;
+  }
+  &.first {
+    background-image: url("../assets/portfolio4.jpg");
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url("../assets/portfolio4@2x.jpg");
+    }
+  }
+  &.second {
+    background-image: url("../assets/portfolio3.jpg");
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url("../assets/portfolio3@2x.jpg");
+    }
+  }
+  &.third {
+    background-image: url("../assets/portfolio2.jpg");
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url("../assets/portfolio@2x.jpg");
+    }
+  }
+  &.fourth {
+    background-image: url("../assets/portfolio1.jpg");
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url("../assets/portfolio1_2x@2x.jpg");
+    }
+  }
+}
+
+.portfolio-list {
+  @media (min-width: $tablet) {
+    width: 706px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+    margin: 0 auto;
+  }
+  @media (min-width: $desctop) {
+    width: 1200px;
+  }
+}

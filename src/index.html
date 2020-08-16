@@ -87,7 +87,9 @@
                 <a href="" class="nav-link">+38 044 111 11 11</a>
               </li>
               <li class="contacts-item">
-                <a href="" class="contacts-link">онлайн-запись</a>
+                <a href="#form" class="contacts-link" data-link
+                  >онлайн-запись</a
+                >
               </li>
             </ul>
             <ul class="socials-list">
@@ -166,7 +168,7 @@
               клиентами "на одной волне". Поэтому, мы всегда готовы
               усовершенствовать каждого, кто к нам приходит!
             </p>
-            <a href="" class="info-link">онлайн-запись</a>
+            <a href="#form" class="info-link">онлайн-запись</a>
           </div>
         </div>
       </section>
@@ -238,7 +240,7 @@
               </p>
             </div>
           </div>
-          <a href="" class="prices-link">онлайн-запись</a>
+          <a href="#form" class="prices-link">онлайн-запись</a>
         </div>
       </section>
       <section class="advantages padding">
@@ -552,7 +554,81 @@
           </ul>
         </div>
       </section>
+      <section class="portfolio padding">
+        <div class="container">
+          <p class="portfolio-paragraph">
+            На латинском языке “барба” означает
+            <span class="portfolio-span">“борода” </span>
+          </p>
+
+          <h2 class="portfolio-title">Наши работы</h2>
+          <ul class="portfolio-list">
+            <li class="portfolio-item first"></li>
+            <li class="portfolio-item second"></li>
+            <li class="portfolio-item third"></li>
+            <li class="portfolio-item fourth"></li>
+          </ul>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <footer class="footer">
+      <div class="footer-flexContainer">
+        <div class="form-container padding" id="form">
+          <div class="container footer-container">
+            <form action="" method="post" autocomplete="off" class="form">
+              <h3 class="form-title">Онлайн-запись</h3>
+              <label class="form-lable name">
+                <input
+                  type="text"
+                  name="name"
+                  class="form-input name"
+                  placeholder=" "
+                  required
+                />
+                <span class="form-span">Имя*</span>
+              </label>
+              <label class="form-lable">
+                <input
+                  type="tel"
+                  name="phone"
+                  class="form-input phone"
+                  placeholder=" "
+                  required
+                />
+                <span class="form-span">Телефон* </span>
+              </label>
+              <span class="form-text">Cообщение</span>
+              <textarea name="comment" rows="2" class="form-comment"></textarea>
+              <button type="submit" class="form-button">Отправить</button>
+            </form>
+          </div>
+        </div>
+        <div class="adress-container padding">
+          <div class="container footer-container">
+            <h3 class="form-title desctop-title">Контакты</h3>
+            <div class="footer-wrapper">
+              <div class="adress">
+                <p class="adress-item map">ул. Васильковая, 7А, Киев, 08132</p>
+                <p class="adress-item phone">+38 044 111 11 11</p>
+                <p class="adress-item env">barbershop@email.com</p>
+              </div>
+              <div class="footer-info">
+                <p class="info-subtitle">время работы</p>
+                <p class="info-item">Ежедневно с 9:00 до 22:00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-contacts">
+        <div class="container footer-flex">
+          <div class="footer-list">
+            <a href="" class="footer-link insta">Instagram</a>
+            <a href="" class="footer-link youtube">Youtube</a>
+          </div>
+          <div class="copyright">&#169; Copyright 2020</div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

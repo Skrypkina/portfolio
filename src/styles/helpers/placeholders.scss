@@ -1,0 +1,28 @@
+%visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+%form-input {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $form-text;
+}
+
+%pseudo {
+  content: "";
+  position: absolute;
+  left: -30px;
+  bottom: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

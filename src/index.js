@@ -81,8 +81,11 @@ function handleNextBtnClick() {
 const menuOpenBtn = document.querySelector("[data-menu-open]");
 const menu = document.querySelector("[data-menu]");
 const nav = document.querySelector("[data-nav]");
+const btn = document.querySelector("[data-link]");
+console.log(btn);
 
 menuOpenBtn.addEventListener("click", handleOpenBtnClick);
+btn.addEventListener("click", handleBtnClick);
 
 function handleOpenBtnClick() {
   const expanded =
@@ -90,4 +93,8 @@ function handleOpenBtnClick() {
   menuOpenBtn.setAttribute("aria-expanded", !expanded);
   menu.classList.toggle("is-open");
   nav.classList.toggle("is-open");
+}
+
+function handleBtnClick() {
+  console.log("yes");
 }
