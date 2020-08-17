@@ -6,7 +6,7 @@
   }
 }
 .portfolio-span {
-  @media (max-width: $maxTablet) {
+  @media (min-width: 440px) and (max-width: $maxTablet) {
     display: block;
     margin-left: 80px;
     line-height: 21px;

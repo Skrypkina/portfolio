@@ -81,20 +81,24 @@ function handleNextBtnClick() {
 const menuOpenBtn = document.querySelector("[data-menu-open]");
 const menu = document.querySelector("[data-menu]");
 const nav = document.querySelector("[data-nav]");
-const btn = document.querySelector("[data-link]");
-console.log(btn);
+const closeBtn = document.querySelector("[data-close]");
+const link = document.querySelector("[data-link]");
 
 menuOpenBtn.addEventListener("click", handleOpenBtnClick);
-btn.addEventListener("click", handleBtnClick);
+closeBtn.addEventListener("click", handleCloseBtnclick);
+link.addEventListener("click", handleCloseBtnclick);
 
 function handleOpenBtnClick() {
   const expanded =
     menuOpenBtn.getAttribute("aria-expanded") === "true" || false;
   menuOpenBtn.setAttribute("aria-expanded", !expanded);
-  menu.classList.toggle("is-open");
-  nav.classList.toggle("is-open");
+  menu.classList.add("is-open");
+  nav.classList.add("is-open");
 }
-
-function handleBtnClick() {
-  console.log("yes");
+function handleCloseBtnclick() {
+  const expanded =
+    menuOpenBtn.getAttribute("aria-expanded") === "true" || false;
+  menuOpenBtn.setAttribute("aria-expanded", !expanded);
+  menu.classList.remove("is-open");
+  nav.classList.remove("is-open");
 }
