@@ -164,6 +164,9 @@
       top: 10px;
     }
   }
+  &.phone {
+    color: $darktheme-font-color;
+  }
   &.phone::before {
     @extend %pseudo;
     width: 20px;

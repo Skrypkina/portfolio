@@ -32,9 +32,16 @@
 
 .site-logo {
   display: block;
-  width: 68px;
+  width: 69px;
   height: 60px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  @media (max-width: $maxTablet) {
+    background-image: url("../assets/Logo.png");
+  }
   @media (min-width: $tablet) {
+    background-image: url("../assets/Logo-big.png");
     margin-right: 64px;
   }
   @media (min-width: $desctop) {

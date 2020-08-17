@@ -82,8 +82,17 @@
   padding: 10px;
   background-color: white;
   border-radius: 50%;
+  width: 20px;
+  height: 20px;
   &:not(:last-child) {
     margin-right: 10px;
+  }
+  transition: fill 250ms linear;
+  &:focus .instagram,
+  &:focus .twitter,
+  &:focus .facebook,
+  &:focus .linkedin {
+    fill: $accent-font-color;
   }
 }
 .instagram,
@@ -93,8 +102,7 @@
   vertical-align: middle;
   fill: $primary-font-color;
   transition: fill 250ms linear;
-  &:hover,
-  &:focus {
+  &:hover {
     fill: $accent-font-color;
   }
 }
