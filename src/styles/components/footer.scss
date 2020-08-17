@@ -165,7 +165,7 @@
     }
   }
   &.phone {
-    color: $darktheme-font-color;
+    color: currentColor;
   }
   &.phone::before {
     @extend %pseudo;
