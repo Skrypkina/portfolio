@@ -558,8 +558,8 @@
       <section class="portfolio padding">
         <div class="container">
           <p class="portfolio-paragraph">
-            На латинском языке “барба” означает
-            <span class="portfolio-span">“борода” </span>
+            На латинском языке “барба” означает“борода”
+            <!-- <span class="portfolio-span">“борода” </span> -->
           </p>
 
           <h2 class="portfolio-title">Наши работы</h2>
@@ -576,7 +576,14 @@
       <div class="footer-flexContainer">
         <div class="form-container padding" id="form">
           <div class="container footer-container">
-            <form action="" method="post" autocomplete="off" class="form">
+            <form
+              action=""
+              method="post"
+              autocomplete="off"
+              class="form"
+              data-form
+              novalidate
+            >
               <h3 class="form-title">Онлайн-запись</h3>
               <label class="form-lable name">
                 <input
@@ -585,7 +592,10 @@
                   class="form-input name"
                   placeholder=" "
                   required
+                  minlength="3"
+                  data-name
                 />
+                <span class="error" aria-live="polite"></span>
                 <span class="form-span">Имя*</span>
               </label>
               <label class="form-lable">
@@ -595,11 +605,19 @@
                   class="form-input phone"
                   placeholder=" "
                   required
+                  minlength="10"
+                  data-tel
                 />
+                <span class="tel-error" aria-live="polite"></span>
                 <span class="form-span">Телефон* </span>
               </label>
               <span class="form-text">Cообщение</span>
-              <textarea name="comment" rows="2" class="form-comment"></textarea>
+              <textarea
+                name="comment"
+                rows="2"
+                class="form-comment"
+                data-text
+              ></textarea>
               <button type="submit" class="form-button">Отправить</button>
             </form>
           </div>
@@ -631,5 +649,21 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop" data-backdrop>
+      <div class="modal" data-modal>
+        <svg
+          width="19"
+          height="19"
+          class="modal-svg"
+          xmlns="http://www.w3.org/2000/svg"
+          data-close-modal
+        >
+          <path
+            d="M18.667 1.88L16.787 0 9.333 7.453 1.88 0 0 1.88l7.453 7.453L0 16.787l1.88 1.88 7.453-7.454 7.454 7.454 1.88-1.88-7.454-7.454 7.454-7.453z"
+          />
+        </svg>
+        <p class="modal-text" data-paragraph></p>
+      </div>
+    </div>
   </body>
 </html>

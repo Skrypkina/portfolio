@@ -102,3 +102,98 @@ function handleCloseBtnclick() {
   menu.classList.remove("is-open");
   nav.classList.remove("is-open");
 }
+
+//============================ form
+const form = document.querySelector("[data-form]");
+const name = document.querySelector("[data-name]");
+const tel = document.querySelector("[data-tel]");
+const text = document.querySelector("[data-text]");
+const nameError = document.querySelector(".name + span.error");
+const telError = document.querySelector(".phone + span.tel-error");
+const url = "https://jsonplaceholder.typicode.com/users";
+
+//modal
+const backdrop = document.querySelector("[data-backdrop]");
+const modal = document.querySelector("[data-modal]");
+const paragraph = document.querySelector("[data-paragraph]");
+const closeModal = document.querySelector("[data-close-modal]");
+
+form.addEventListener("submit", handleFormSubmit);
+closeModal.addEventListener("click", () => {
+  backdrop.classList.remove("is-open");
+});
+name.addEventListener("input", function (event) {
+  if (name.validity.valid) {
+    nameError.innerHTML = "";
+    nameError.className = "error";
+  } else {
+    showError();
+  }
+});
+tel.addEventListener("input", function (event) {
+  if (tel.validity.valid) {
+    telError.innerHTML = "";
+    telError.className = "error";
+  } else {
+    showError();
+  }
+});
+
+window.onclick = function (event) {
+  if (event.target !== modal) {
+    backdrop.classList.remove("is-open");
+  }
+};
+//--------------------------------
+function handleFormSubmit(evt) {
+  evt.preventDefault();
+  const nameToAdd = name.value.trim();
+  const phoneToAdd = tel.value.trim();
+  const textToAdd = text.value.trim();
+
+  if (!name.validity.valid) {
+    showError();
+    return;
+  } else if (!tel.validity.valid) {
+    showError();
+    return;
+  }
+
+  const dataToAdd = {
+    postId: 500,
+    email: "Sincere@april.biz",
+    nameToAdd,
+    phoneToAdd,
+    textToAdd,
+  };
+
+  fetch(url, {
+    method: "POST",
+    body: JSON.stringify(dataToAdd),
+    headers: { "Content-type": "application/json; charset=UTF-8" },
+  })
+    .then((res) => {
+      if (res.ok) return res.json();
+      throw new Error("Error while fetching " + response.statusText);
+    })
+    .then((data) => {
+      console.log(data);
+      backdrop.classList.add("is-open");
+      paragraph.innerHTML = `${nameToAdd}</br> спасибо за заказ. Наш менеджер свяжется с вами.`;
+    })
+    .catch((err) => console.log(err));
+
+  form.reset();
+}
+
+function showError() {
+  if (name.validity.valueMissing) {
+    nameError.textContent = "Введите имя, пожалуйста.";
+  } else if (tel.validity.valueMissing) {
+    telError.textContent = "Введите телефон, пожалуйста.";
+  } else if (name.validity.tooShort) {
+    nameError.textContent = `Должно быть минимум ${name.minLength} буквы`;
+  } else if (tel.validity.tooShort) {
+    telError.textContent = `Должно быть минимум ${tel.minLength} цифр`;
+  }
+}
