@@ -16,6 +16,7 @@
   transition: 250ms linear;
   @media (max-width: $maxTablet) {
     max-width: 480px;
+    width: 100%;
     height: 580px;
     &.first {
       background-image: url("../assets/Slidermob\ img\ 1.png");
