@@ -107,7 +107,6 @@ function handleCloseBtnclick() {
 const form = document.querySelector("[data-form]");
 const name = document.querySelector("[data-name]");
 const tel = document.querySelector("[data-tel]");
-const text = document.querySelector("[data-text]");
 const nameError = document.querySelector(".name + span.error");
 const telError = document.querySelector(".phone + span.tel-error");
 const url = "https://jsonplaceholder.typicode.com/users";
@@ -147,9 +146,14 @@ window.onclick = function (event) {
 //--------------------------------
 function handleFormSubmit(evt) {
   evt.preventDefault();
-  const nameToAdd = name.value.trim();
-  const phoneToAdd = tel.value.trim();
-  const textToAdd = text.value.trim();
+  const dataToAdd = {
+    postId: 500,
+    email: "Sincere@april.biz",
+  };
+  const formData = new FormData(evt.currentTarget);
+  formData.forEach((value, name) => {
+    dataToAdd[name] = value;
+  });
 
   if (!name.validity.valid) {
     showError();
@@ -158,14 +162,6 @@ function handleFormSubmit(evt) {
     showError();
     return;
   }
-
-  const dataToAdd = {
-    postId: 500,
-    email: "Sincere@april.biz",
-    nameToAdd,
-    phoneToAdd,
-    textToAdd,
-  };
 
   fetch(url, {
     method: "POST",
@@ -179,7 +175,7 @@ function handleFormSubmit(evt) {
     .then((data) => {
       console.log(data);
       backdrop.classList.add("is-open");
-      paragraph.innerHTML = `${nameToAdd}</br> спасибо за заказ. Наш менеджер свяжется с вами.`;
+      paragraph.innerHTML = `${data.name}</br> спасибо за заказ. Наш менеджер свяжется с вами.`;
     })
     .catch((err) => console.log(err));
 

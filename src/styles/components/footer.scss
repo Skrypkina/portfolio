@@ -308,6 +308,9 @@ a[href^="tel"] {
 /* This is the style of our error messages */
 .error,
 .tel-error {
+  @media (max-width: 767px) {
+    display: block;
+  }
   color: white;
   text-transform: uppercase;
   position: absolute;

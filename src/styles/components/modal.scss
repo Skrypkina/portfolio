@@ -7,11 +7,13 @@
   background-color: rgba(25, 28, 38, 0.3);
   pointer-events: none;
   opacity: 0;
+  visibility: hidden;
 
   &.is-open {
     opacity: 1;
-    pointer-events: all;
-    transition: opacity 250ms linear;
+    pointer-events: initial;
+    visibility: visible;
+    transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out;
   }
 }
 
@@ -20,12 +22,17 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 400px;
   height: 200px;
   padding: 40px 30px;
   border-radius: 2%;
   background-color: $secondary-font-color;
   border: $mobile-menu-border;
+  @media (max-width: 576px) {
+    width: 280px;
+  }
+  @media (min-width: 577px) {
+    width: 400px;
+  }
 }
 .modal-text {
   font-size: 24px;
